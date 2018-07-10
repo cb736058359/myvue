@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>vueJS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="vue.js"></script>
+</head>
+  <body>
+    <div id="app">
+      <ol>
+        <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:keys="item.id"></todo-item>
+      </ol>
+    </div>
+    <div id="app1">
+      <p>{{foo}}</p>
+      <button type="button" @click="foo='baz'">Change it</button>
+    </div>
+    <div id="example">
+        <button type="button"v-on:click="count+=1">add 1</button>
+        <p>this time is {{count}}</p>
+    </div>
+    <div id="vmodel">
+      <p style="white-space:pre-line;">this is print message :{{message}}</p>
+      <textarea name="name" rows="8" cols="80" v-model="message" placeholder="add lines"></textarea><br>
+      <input type="checkbox" id="checkbox" v-model="checked"/>
+      <label for="checkbox">{{checked}}</label><br>
+
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+     <label for="jack">Jack</label>
+     <input type="checkbox" id="john" value="John" v-model="checkedNames">
+     <label for="john">John</label>
+     <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+     <label for="mike">Mike</label><br>
+
+     <span>Checked Name: {{checkedNames}}</span><br>
+
+     <input type="radio" name="one" value="one" v-model="radio">
+     <label for="one">one</label>
+     <input type="radio" name="two" value="two" v-model="radio">
+     <label for="two">two</label>
+     <span>radio :{{radio}}</span><br>
+
+     <!-- 当选中时，`picked` 为字符串 "a" -->
+    <input type="radio" v-model="picked" value="a">
+
+    <!-- `toggle` 为 true 或 false -->
+    <input type="checkbox" v-model="toggle">
+
+    <!-- 当选中第一个选项时，`selected` 为字符串 "abc" -->
+    <select v-model="selected">
+      <option value="abc">ABC</option>
+    </select><br>
+
+    <select v-model="selected01">
+    <!-- 内联对象字面量 -->
+      <option v-bind:value="{ number: 123 }">123</option>
+    </select>
+    <p>selct value {{selected01.number}}</p>
+
+    <input v-model="msg">
+    <p >{{msg}}</p>
+    </div>
+  </body>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="component.js"></script>
+</html>

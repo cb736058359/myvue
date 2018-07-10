@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vueJS</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <template v-for="book in filterBooks">
+          <li>书名:{{book.name}}</li>
+          <li>作者:{{book.author}}</li>
+        </template>
+      </ul>
+    </div>
+  </body>
+  <script src="../vue.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</html>

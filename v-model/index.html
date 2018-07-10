@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vueJS</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" @input="hadndleInput" placehoder="输入..." >
+      <p>输入的内容：{{message}}</p>
+
+      <select v-model="selected">
+        <option :value="option.value" v-for="option in options">option.text</option>
+      </select>
+      <p></p>
+    </div>
+  </body>
+  <script src="../vue.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vueJS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <my-component @increase="getTotal" @reduce="getTotal"></my-component>
+      <props-component :message="[1,2,3]"></props-component>
+      <single-component :init-count="1"></single-component>
+      <p>总数：{{total}}</p>
+      <model-component v-model="total"></model-component>
+      <button @click="reduceTotal">减少总记录条数</button>
+
+      <p>消息推送：{{message}}</p>
+      <component-a ></component-a>
+
+    </div>
+  </body>
+  <script src="../vue.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</html>
